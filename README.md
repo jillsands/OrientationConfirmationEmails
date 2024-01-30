@@ -4,11 +4,11 @@
 This program is intended to send Orientation Confirmation emails for the University of Maryland Office of Student Orientation & Transition. 
 
 ### Motivation & Context
-- Student employees at the UMD Orientation Office have been manually sending confirmation emails to students registered over phone/email for several years. This task takes away from the time we can spend helping students. Also, the magnitude of emails needing to be sent prevents us from personalizing these emails, which leads to repetitive questions from students.
+- Student employees at the UMD Orientation Office have been manually sending confirmation emails to students registered over phone/email for several years. This task takes away from the time they can spend helping students. Also, the magnitude of emails needing to be sent prevents us from personalizing these emails, which leads to repetitive questions from students.
 - When a student is registered over phone/email for an orientation program, the employee on duty fills out a “Virtual Blue Card”, which is a Google Form that details the registration. I have attached a Google Apps Script to run whenever this form is submitted.
 
 ### Usage
-The code runs automatically whenever a new Blue Card form is submitted. It will send an email to the student specified using [this template](https://docs.google.com/document/d/1h_KszvItnxJcfPQK9sCOqld164J-nf3TtHLFnq0nNwI/edit?usp=sharing), based on the information that was entered into the Blue Card. If successful, the "Email Sent" checkbox in the Responses sheet will be checked. 
+The code runs automatically whenever a new Blue Card form is submitted. It will send an email to the student specified using [this template](https://docs.google.com/document/d/1h_KszvItnxJcfPQK9sCOqld164J-nf3TtHLFnq0nNwI/edit?usp=sharing), with dates, charges, and links dynamically generated based on the information that was entered into the Blue Card. If successful, the "Email Sent" checkbox in the Responses sheet will be checked. 
 
 ### Setup
  1. Create a new Google Form with the dates of the upcoming Orientation programs
