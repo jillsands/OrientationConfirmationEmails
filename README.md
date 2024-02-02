@@ -13,14 +13,16 @@ The code runs automatically whenever a new Blue Card form is submitted. It will 
 ### Setup
  1. Create a new Google Form with the dates of the upcoming Orientation programs
 	 - Add a rule to the email field to check for an "@"
-	 - All other fields, except the Family Orientation Date, should be required
+	 - All other fields, except the Family Orientation Date, should be required.
  2. Go to Responses > Link to Sheet
- 3. In the Sheet, go to Extensions > Apps Script
- 4.  Add all 3 files in the editor
- 5. From the toolbar on the left, add a trigger with the following details: 
+ 3. Add a column to the left of column A and fill it with empty checkboxes.
+ 4. At the top of the Sheet, go to Extensions > Apps Script
+ 5. Copy and paste the 3 files from above into the Apps Script editor. You can copy Code.gs into the default file, but you will need to make new HTML files for the other two.
+ 6. Run the project using the "Run" button at the top of Code.gs
+ 7. From the toolbar on the left, click the Triggers tab. Add a trigger with the following details: 
 	 - Function to run: sendEmails 
-	 - Event source: From Spreadsheet 
 	 - Event type: On Form Submit
+  	- Everything else can be set to the default
 
 Note: the script will always be run under the account of the person who created the trigger. This means the emails will appear in the creator's "Sent" box, but to students it'll appear as if it was sent by [askorientation@umd.edu](mailto:askorientation@umd.edu).
 
