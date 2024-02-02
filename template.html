@@ -1,80 +1,181 @@
 <div dir="ltr">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 10pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Welcome to the University of Maryland! This email confirms your registration for a New Student Orientation program. Please read the following reminders </span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">in full</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"> so you can have the best experience.</span></p>
-    <h3 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size:  13pt; font-family: 'Source Sans 3',sans-serif; color: #cc4125; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Your Registration</span></h3>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Student Orientation</span></p>
-    <ul style="margin-top: 0px; margin-bottom: 0px;">
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 10pt; margin-bottom: 10pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"><?= student["Program Date"] ?></span></p>
+  <p dir="ltr" style="margin-top: 10pt; padding: 0pt 0pt 10pt;">
+    <span>Welcome to the University of Maryland! This email confirms your registration for a New Student Orientation program. Please read the following reminders </span>
+    <span style="font-weight: 600;">in full</span>
+    <span> so you can have the best experience.</span>
+  </p>
+  <h3 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;">
+    <span style="font-size: 13pt; color: #cc4125;">Your Registration</span>
+  </h3>
+  <p dir="ltr" style="margin-bottom: 10pt;">
+    <span style="font-size: 11pt; font-weight: 600;">Student Orientation</span>
+  </p>
+  <ul style="margin-top: 0px; margin-bottom: 0px;">
+    <li dir="ltr">
+      <p dir="ltr" style="margin-top: 10pt; margin-bottom: 10pt;" role="presentation">
+        <span style="font-size: 11pt;"> <?= student["Program Date"] ?> </span>
+      </p>
     </li>
-    </ul>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 10pt; margin-bottom: 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Terp Family Orientation</span></p>
-    <ul style="margin-top: 0px; margin-bottom: 0px;">
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 10pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Participants: <?= student["Family Orientation Attendees"] ?></span></p>
+  </ul>
+  <p dir="ltr" style="margin-top: 10pt; margin-bottom: 10pt;">
+    <span style="font-size: 11pt; font-weight: 600;">Terp Family Orientation</span>
+  </p>
+  <ul style="margin-top: 0px; margin-bottom: 0px;">
+    <li dir="ltr">
+      <p dir="ltr" style="margin-top: 10pt;" role="presentation">
+        <span style="font-size: 11pt;">Participants: <?= student["Family Orientation Attendees"] ?> </span>
+      </p>
     </li>
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Terp Family Orientation Date: <?= student.familyDate ?></span></p>
+    <li dir="ltr">
+      <p dir="ltr" style="margin-bottom: 10pt;" role="presentation">
+        <span style="font-size: 11pt;">Terp Family Orientation Date: <?= student.familyDate ?> </span>
+      </p>
     </li>
-    </ul>
-    <? if (student["Family Orientation Attendees"] == "None") { ?>
-        <p dir="ltr" style="line-height: 1.2; margin-top: 10pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Would you like to register family members or supporters for </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/terp-family-orientation" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">Terp Family Orientation</span></a><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">? To register for an in-person session, they can visit the online registration portal. If it is less than 5 business days before the event, please follow the steps for </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/terp-family-orientation#:~:text=Terp%20Family%20Orientation-,On%2Dsite%20Registration,-We%20are%20delighted" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">on-site registration</span></a><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">. If they are interested in attending an online Terp Family Orientation, they can register by calling our office at 301-314-8217. There is a $74.00 fee charged to the student per registered family member.</span></p>
-    <? } ?>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Charges</span></p>
-    <ul style="margin-top: 0px; margin-bottom: 0px;">
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 10pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Student Orientation: $<?= student.charge ?></span></p>
+  </ul> <? if (student["Family Orientation Attendees"] == "None") { ?> <p dir="ltr" style="margin-top: 10pt; padding: 0pt 0pt 10pt;">
+    <span style="font-style: italic;">Would you like to register family members or supporters for </span>
+    <a style="text-decoration-line: none;" href="https://orientation.umd.edu/terp-family-orientation" target="_blank" rel="noopener">
+      <span style="font-style: italic;  text-decoration-line: underline;">Terp Family Orientation</span></a><span style="font-style: italic;">? To register for an in-person session, they can visit the online registration portal. If it is less than 5 business days before the event, please follow the steps for </span>
+    <a style="text-decoration-line: none;" href="https://orientation.umd.edu/terp-family-orientation/family-registration-schedules#:~:text=Terp%20Family%20Orientation-,On%2Dsite%20Registration,-We%20are%20delighted" target="_blank" rel="noopener">
+      <span style="font-style: italic;  text-decoration-line: underline;">on-site registration</span></a><span style="font-style: italic;">. If they are interested in attending an online Terp Family Orientation, they can register by calling our office at 301-314-8217. There is a $74.00 fee charged to the student per registered family member.</span>
+  </p> <? } ?> <p dir="ltr" style="margin-bottom: 10pt;">
+    <span style="font-size: 11pt; font-weight: 600;">Charges</span>
+  </p>
+  <ul style="margin-top: 0px; margin-bottom: 0px;">
+    <li dir="ltr">
+      <p dir="ltr" style="margin-top: 10pt;" role="presentation">
+        <span style="font-size: 11pt;">Student Orientation: $<?= student.charge ?> </span>
+      </p>
     </li>
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Terp Family Orientation: $<?= student.familyCharge ?></span></p>
+    <li dir="ltr">
+      <p dir="ltr" role="presentation">
+        <span style="font-size: 11pt;">Terp Family Orientation: $<?= student.familyCharge ?> </span>
+      </p>
     </li>
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Total Charges: $<?= student.charge + student.familyCharge ?></span></p>
+    <li dir="ltr">
+      <p dir="ltr" style="margin-bottom: 10pt;" role="presentation">
+        <span style="font-size: 11pt;">Total Charges: $<?= student.charge + student.familyCharge ?> </span>
+      </p>
     </li>
-    </ul>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 10pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">*You will be billed AFTER attending New Student Orientation. See more information </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/paying-new-student-orientation" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">here</span></a><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">.</span></p>
-    <h3 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size:  13pt; font-family: 'Source Sans 3',sans-serif; color: #cc4125; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Next Steps</span></h3>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">You must complete the </span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 800; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">REQUIRED</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"> To-Do List </span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 800; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">prior</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"> to attending your New Student Orientation program: 
-    <? if (student["Academic College"] == "Freshmen Connection") { ?>
-        </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/freshmen-connection/freshmen-connection-do-list" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">Freshman Connection To-Do List</span></a></p>
-    <? } else if (student["Program Type"] == "F1" || student["Program Type"] == "F2" || student["Program Type"] == "FO") { ?>
-        </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/first-year-orientation/first-year-do-list" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">First Year To-Do List</span></a></p>
-    <? } else if (student["Program Type"] == "T1" || student["Program Type"] == "TO"){ ?>
-        </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/transfer-new-student-orientation/transfer-do-list" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">Transfer To-Do List</span></a></p>
-    <? } else { ?>
-        <ul> 
-        </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/freshmen-connection/freshmen-connection-do-list" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">Freshman Connection To-Do List</span></a></p>
-        </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/first-year-orientation/first-year-do-list" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">First Year To-Do List</span></a></p>
-        </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/transfer-new-student-orientation/transfer-do-list" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: bold; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">Transfer To-Do List</span></a></p>
-        </ul>
-    <? } ?>
-    <h4 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size:  13pt; font-family: 'Source Sans 3',sans-serif; color: #cc4125; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Check-In and Parking</span></h4>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Check-In</span></p>
-    <ul style="margin-top: 0px; margin-bottom: 0px;">
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <? if (student["Program Type"] == "F2") { ?>
-        <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">2-day programs will begin at 8:00AM with Check-In in the Samuel Riggs IV Alumni Center. The program will end on the second day at 3:30PM.</span></p>
-    <? } else if (student["Program Type"] == "F1" || student["Program Type"] == "T1") { ?>
-        <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">1-day programs will begin at 8:00AM with Check-In in the Cole Student Activities Building. Programs should end before 4:30PM.</span></p>
-    <? } else if (student["Program Type"] == "FO" || student["Program Type"] == "TO") { ?>
-        <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Online programs will begin at 9:00AM and will end around 4:00PM. You will receive a zoom link closer to the day of your New Student Orientation Session.</span></p>
-    <? } else { ?>
-        <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;" role="presentation"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">2-day programs will begin at 8:00AM with Check-In in the Samuel Riggs IV Alumni Center. The program will end on the second day at 3:30PM.
-            <br/>1-day programs will begin at 8:00AM with Check-In in the Cole Student Activities Building. Programs should end before 4:30PM.
-            <br />Online programs will begin at 9:00AM and will end around 4:00PM. You will receive a zoom link closer to the day of your New Student Orientation Session.</span></p>
-    <? } ?>
+  </ul>
+  <p dir="ltr" style="margin-top: 10pt;padding: 0pt 0pt 10pt;"><span>*You will be billed AFTER attending New Student Orientation. See more information </span>
+  <a style="text-decoration-line: none;" href="https://orientation.umd.edu/paying-new-student-orientation" target="_blank" rel="noopener"><span style="text-decoration-line: underline;">here</span></a><span>.</span></p>
+  <h3 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;">
+    <span style="font-size:  13pt; color: #cc4125;">Next Steps</span>
+  </h3>
+  <p dir="ltr" style="padding: 0pt 0pt 10pt;">
+    <span style="font-size: 11pt; font-weight: 600;">You must complete the You must complete the REQUIRED To-Do List prior to attending your New Student Orientation program: <? if (student["Academic College"] == "Freshmen Connection") { ?> </span>
+    <a style="text-decoration-line: none;" href="https://orientation.umd.edu/freshmen-connection/freshmen-connection-do-list" target="_blank" rel="noopener">
+      <span style="font-weight: bold; text-decoration-line: underline;">Freshman Connection To-Do List</span>
+    </a> <? } else if (student["Program Type"] == "F1" || student["Program Type"] == "F2" || student["Program Type"] == "FO") { ?> </span>
+    <a style="text-decoration-line: none;" href="https://orientation.umd.edu/first-year-orientation/first-year-do-list" target="_blank" rel="noopener">
+      <span style="font-weight: bold; text-decoration-line: underline;">First Year To-Do List</span>
+    </a> <? } else if (student["Program Type"] == "T1" || student["Program Type"] == "TO"){ ?> </span>
+    <a style="text-decoration-line: none;" href="https://orientation.umd.edu/transfer-new-student-orientation/transfer-do-list" target="_blank" rel="noopener">
+      <span style="font-weight: bold; text-decoration-line: underline;">Transfer To-Do List</span>
+    </a> <? } else { ?>
+  <ul>
+    <li dir="ltr">
+      <p dir="ltr" style="margin-top: 10pt; margin-bottom: 10pt;" role="presentation">
+        <a style="text-decoration-line: none;" href="https://orientation.umd.edu/freshmen-connection/freshmen-connection-do-list" target="_blank" rel="noopener">
+          <span style="font-weight: bold;  text-decoration-line: underline;">Freshman Connection To-Do List</span>
+        </a>
+      </p>
     </li>
-    </ul>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Parking</span></p>
-    <ul style="margin-top: 0px; margin-bottom: 0px;">
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; color: #000000; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 11pt; color: #222222; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">We recommend reviewing our </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/about/navigation" target="_blank" rel="noopener"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">Navigating to Campus</span></a><span style="font-size: 11pt; color: #222222; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"> page to ensure a smooth arrival to your Orientation program.&nbsp;</span></p>
+    <li dir="ltr">
+      <p dir="ltr" style="margin-top: 10pt; margin-bottom: 10pt;" role="presentation">
+        <a style="text-decoration-line: none;" href="https://orientation.umd.edu/first-year-orientation/first-year-do-list" target="_blank" rel="noopener">
+          <span style="font-weight: bold;  text-decoration-line: underline;">First Year To-Do List</span>
+        </a>
+      </p>
     </li>
-    <li dir="ltr" style="list-style-type: disc; font-size: 11pt; font-family: 'Source Sans 3',sans-serif; color: #000000; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline">
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" role="presentation"><span style="font-size: 11pt; color: #222222; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Please park in Lot 1 for all orientation programs. You can find the Parking Pass </span><a style="text-decoration-line: none;" href="https://drive.google.com/file/d/1ISOekmqqLOfP3mHGo5BO1Gt9UYd3MWet/view" target="_blank" rel="noopener"><span style="font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">here</span></a><span style="font-size: 11pt; color: #222222; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"> or in your To-Do List linked above.</span></p>
+    <li dir="ltr">
+      <p dir="ltr" style="margin-top: 10pt; margin-bottom: 10pt;" role="presentation">
+        <a style="text-decoration-line: none;" href="https://orientation.umd.edu/transfer-new-student-orientation/transfer-do-list" target="_blank" rel="noopener">
+          <span style="font-weight: bold;  text-decoration-line: underline;">Transfer To-Do List</span>
+        </a>
+      </p>
     </li>
-    </ul>
-    <h3 dir="ltr" style="line-height: 1.2; margin-top: 10pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size:  13pt; font-family: 'Source Sans 3',sans-serif; color: #cc4125; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Changes</span></h3>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">It is possible to change your New Student Orientation program using our online system up to seven days before your scheduled date. If you wish to cancel your program altogether, you must call the Office of Student Orientation and Transition at (301) 314-8217.</span></p>
-    <p dir="ltr" style="line-height: 1.2; text-align: center; margin-top: 0pt; margin-bottom: 0pt; padding: 0pt 0pt 10pt;"><span style="font-size: 15pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Questions? Please see our FAQ page </span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/about/frequently-asked-questions-faqs" target="_blank" rel="noopener"><span style="font-size: 15pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">here</span></a><span style="font-size: 15pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-weight: 600; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">!</span></p>
-    <p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 10pt;"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Thank you,</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"><br /></span><span style="font-size: 13pt; font-family: 'Maven Pro',sans-serif; background-color: transparent; font-weight: 800; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Office of Student Orientation and Transition</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"><br /></span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">University of Maryland, College Park</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"><br /></span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">1102 Cole Field House </span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; color: #ff0000; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">|</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"> College Park, MD 20742</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"><br /></span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; color: #1155cc; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"><a href="mailto:askorientation@umd.edu" target="_blank" rel="noopener">askorientation@umd.edu</a>&nbsp;</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; color: #ff0000; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">|</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"> 301-314-8217</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"><br /></span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;">Hours: 8:30 am - 4:30 pm EST, Monday - Friday</span><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; vertical-align: baseline;"><br /></span><a style="text-decoration-line: none;" href="https://orientation.umd.edu/" target="_blank" rel="noopener"><span style="font-size: 11pt; font-family: 'Source Sans 3',sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; text-decoration-line: underline; vertical-align: baseline;">https://orientation.umd.edu</span></a></p>
-    </div>
+  </ul> <? } ?></p>
+  <h3 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;">
+    <span style="font-size:  13pt; color: #cc4125;">Check-In and Parking</span>
+  </h3><p dir="ltr">
+    <span style="font-size: 11pt; font-weight: 600;">Check-In</span>
+  </p><ul style="margin-top: 0px; margin-bottom: 0px;">
+    <li dir="ltr"> <? if (student["Program Type"] == "F2") { ?> <p dir="ltr" style="margin-bottom: 10pt;" role="presentation">
+        <span style="font-size: 11pt;">2-day programs will begin at 8:00AM with Check-In in the Samuel Riggs IV Alumni Center. The program will end on the second day at 3:30PM.</span>
+      </p> <? } else if (student["Program Type"] == "F1" || student["Program Type"] == "T1") { ?> <p dir="ltr" style="margin-bottom: 10pt;" role="presentation">
+        <span style="font-size: 11pt;">1-day programs will begin at 8:00AM with Check-In in the Cole Student Activities Building. Programs should end before 4:30PM.</span>
+      </p> <? } else if (student["Program Type"] == "FO" || student["Program Type"] == "TO") { ?> <p dir="ltr" style="margin-bottom: 10pt;" role="presentation">
+        <span style="font-size: 11pt;">Online programs will begin at 9:00AM and will end around 4:00PM. You will receive a zoom link closer to the day of your New Student Orientation Session.</span>
+      </p> <? } else { ?> <p dir="ltr" style="margin-bottom: 10pt;" role="presentation">
+        <span style="font-size: 11pt;">2-day programs will begin at 8:00AM with Check-In in the Samuel Riggs IV Alumni Center. The program will end on the second day at 3:30PM. <br />1-day programs will begin at 8:00AM with Check-In in the Cole Student Activities Building. Programs should end before 4:30PM. <br />Online programs will begin at 9:00AM and will end around 4:00PM. You will receive a zoom link closer to the day of your New Student Orientation Session. </span>
+      </p> <? } ?> </li>
+  </ul>
+  <p dir="ltr">
+    <span style="font-size: 11pt; font-weight: 600;">Parking</span>
+  </p><ul style="margin-top: 0px; margin-bottom: 0px;">
+    <li dir="ltr" style="color: #000000;">
+      <p dir="ltr" role="presentation">
+        <span style="font-size: 11pt; color: #222222;">We recommend reviewing our </span>
+        <a style="text-decoration-line: none;" href="https://orientation.umd.edu/about/navigation" target="_blank" rel="noopener">
+          <span style="font-size: 11pt;text-decoration-line: underline;">Navigating to Campus</span>
+        </a>
+        <span style="font-size: 11pt; color: #222222;"> page to ensure a smooth arrival to your Orientation program.&nbsp;</span>
+      </p>
+    </li>
+    <li dir="ltr" style="color: #000000;">
+      <p dir="ltr" role="presentation">
+        <span style="font-size: 11pt; color: #222222;">Please park in Lot 1 for all orientation programs. You can find the Parking Pass </span>
+        <a style="text-decoration-line: none;" href="https://drive.google.com/file/d/1ISOekmqqLOfP3mHGo5BO1Gt9UYd3MWet/view" target="_blank" rel="noopener">
+          <span style="font-size: 11pt;text-decoration-line: underline;">here</span>
+        </a>
+        <span style="font-size: 11pt; color: #222222;"> or in your To-Do List linked above.</span>
+      </p>
+    </li>
+  </ul>
+  <h3 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;">
+    <span style="font-size:  13pt; color: #cc4125;">Changes</span>
+  </h3>
+  <p dir="ltr" style="padding: 0pt 0pt 10pt;">
+    <span style="font-size: 11pt;">It is possible to change your New Student Orientation program using our online system up to seven days before your scheduled date. If you wish to cancel your program altogether, you must call the Office of Student Orientation and Transition at (301) 314-8217.</span>
+  </p>
+  <p dir="ltr" style="text-align: center; padding: 0pt 0pt 10pt;">
+    <span style="font-size: 15pt;  font-weight: 600;">Questions? Please see our FAQ page </span>
+    <a style="text-decoration-line: none;" href="https://orientation.umd.edu/about/frequently-asked-questions-faqs" target="_blank" rel="noopener">
+      <span style="font-size: 15pt;  font-weight: 600; text-decoration-line: underline;">here</span></a><span style="font-size: 15pt;  font-weight: 600;">!</span>
+  </p>
+  <p dir="ltr" style="margin-bottom: 10pt;">
+    <span>Thank you,</span>
+    <span>
+      <br />
+    </span>
+    <span style="font-size: 13pt; font-family: 'Maven Pro',sans-serif; font-weight: 800;">Office of Student Orientation and Transition</span>
+    <span>
+      <br />
+    </span>
+    <span>University of Maryland, College Park</span>
+    <span>
+      <br />
+    </span>
+    <span>1102 Cole Field House </span>
+    <span style="color: #ff0000;">|</span>
+    <span> College Park, MD 20742</span>
+    <span>
+      <br />
+    </span>
+    <span style="color: #1155cc;">
+      <a href="mailto:askorientation@umd.edu" target="_blank" rel="noopener">askorientation@umd.edu</a>&nbsp; </span>
+    <span style="color: #ff0000;">|</span>
+    <span> 301-314-8217</span>
+    <span>
+      <br />
+    </span>
+    <span>Hours: 8:30 am - 4:30 pm EST, Monday - Friday</span>
+    <span>
+      <br />
+    </span>
+    <a style="text-decoration-line: none;" href="https://orientation.umd.edu/" target="_blank" rel="noopener">
+      <span style="text-decoration-line: underline;">https://orientation.umd.edu</span>
+    </a>
+  </p>
+</div>
