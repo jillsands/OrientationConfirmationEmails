@@ -20,7 +20,7 @@ The code runs automatically whenever a new Blue Card form is submitted. It will 
  5. Copy and paste the 3 files from above into the Apps Script editor. You can copy Code.gs into the default file, but you will need to make new HTML files for the other two.
  6. Run the project using the "Run" button at the top of Code.gs
  7. From the toolbar on the left, click the Triggers tab. Add a trigger with the following details:
-    	 - Function to run: sendEmails 
+	- Function to run: sendEmails 
 	 - Event type: On Form Submit
   	- Everything else can be set to the default
  8. If you have not already done so, you must allow Gmail to send emails on your behalf. To do so, log into your UMD Gmail account > Settings > Accounts > Send mail as > Add another email address. Please enter "UMD Orientation" as the name and "askorientation@umd.edu" as the email. Be sure to verify yourself using the email sent to askorientation@umd.edu.
