@@ -1,23 +1,8 @@
 /* If something went wrong with a Blue Card that has already been submitted, this file can be used by highlighting the
 corresponding row in the Google Form, then running "sendEmails" from the App Script UI. */
 
-/* Making button in Google Sheets for OOAs */
-function onOpen() {
-  var ui = SpreadsheetApp.getUi();
-  ui.createMenu('Emails')
-      .addItem('Instructions and Setup', 'openReadMe')
-      .addItem('Send Confirmation Emails', 'sendEmails')
-      .addToUi();
-}
-
-/* Opens link to GitHub ReadMe */
-function openReadMe() {
-   var htmlOutput = HtmlService.createHtmlOutputFromFile('openURL').setHeight(40);
-   SpreadsheetApp.getUi().showModalDialog(htmlOutput, 'Opening instructions...');
-}
-
 /* Parse blue card for necessary data */ 
-function parseData(row) {
+function parseRow(row) {
     const student = [];
 
     student.college = row[7]
@@ -46,7 +31,7 @@ function parseData(row) {
 }
 
  /* Sends an email for each row in the "Emails" sheet */
-function sendEmails() {
+function manualSend() {
   /* Getting grid array of selected rows */
   const sheet = SpreadsheetApp.getActive().getSheetByName("Form Responses");
   const rangeSelected = sheet.getActiveRange();
@@ -89,4 +74,3 @@ function sendEmails() {
   const emailBoxes = sheet.getRange(rangeSelected.getRow(), 1, rangeSelected.getNumRows());
   emailBoxes.setValue(true);
 } 
-
